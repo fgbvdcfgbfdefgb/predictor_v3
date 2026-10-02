@@ -1,0 +1,26 @@
+seed: 42
+data_root: data/processed
+artifacts: artifacts
+symbols: [BTC, ETH, LTC]
+lookback: 60
+initial_cash: 10000.0
+fee_bps: 10.0
+slippage_bps: 2.0
+epochs: 100
+steps_per_epoch: 1440
+checkpoint_every: 5
+analyser_trees: 200
+ppo:
+  hidden: 2941
+  blocks: 13
+  target_parameters: 450000000
+  parameter_tolerance: 1000000
+  mixed_precision: true
+  gradient_checkpointing: true
+  lr: 0.0003
+  gamma: 0.995
+  clip: 0.2
+  update_epochs: 6
+  batch_size: 32
+  entropy_coef: 0.01
+  adviser_reward_weight: 0.05
